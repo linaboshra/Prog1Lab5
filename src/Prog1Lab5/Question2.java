@@ -55,7 +55,7 @@ public class Question2 {
         int int2 = input.nextInt();
         
         for (int i = 1; i <= int1 && i <= int2; i++) { //Goes through all the numbers between int1 and int2
-            if(int1%i==0 && int2%i==0){ //Any number that is a divisor of these two numbers gets assigened to gcd
+            if((int1 % i == 0) && (int2 % i == 0)){ //Any number that is a divisor of these two numbers gets assigened to gcd
                gcd = i; //At the end of the iteration, the last number that gets assigend to gcd is the greatest common divisor
             }   
         }
