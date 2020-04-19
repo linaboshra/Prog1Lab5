@@ -60,6 +60,6 @@ public class Question2 {
             }   
         }
         
-        System.err.println("The greatest common divisor is " + gcd);
+        System.out.println("The greatest common divisor is " + gcd);
     }
 }
