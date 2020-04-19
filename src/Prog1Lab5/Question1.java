@@ -16,6 +16,10 @@
  */
 package Prog1Lab5;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  * This program reads a file containing a list of names and scores. The program 
  * identifies and outputs the names with highest and lowest score, the total 
@@ -28,11 +32,56 @@ public class Question1 {
     
     /**
      * @param args the command line arguments
+     * @throws java.io.FileNotFoundException
      */
     
-    public static void main(String[] args){
+    public static void main(String[] args) throws FileNotFoundException {
         
+        File inFile = new File("C:\\Users\\Lina's PC\\Desktop/grades.txt");
         
+        Scanner scF = new Scanner(inFile);
+        
+        int count = 0, total = 0, max = 0, min = 2147483647;
+        String nameHighest = "", surnameHighest = "";
+        String nameLowest = "", surnameLowest = "";
+        
+        while(scF.hasNext()){
+            
+            String name = scF.next();
+            String surname = scF.next();
+            int grade = scF.nextInt();
+            
+            if (grade > max) {
+                max = grade;
+                nameHighest = name;
+                surnameHighest = surname;
+            } 
+            if (grade < min){
+              min = grade;
+              nameLowest = name;
+              surnameLowest = surname;
+            }
+            
+            total += grade;
+            count ++;
+        }
+        
+        System.out.println("Highest score: " + nameHighest + " " + surnameHighest + " with a score of " + max);
+        System.out.println("Lowest score: " + nameLowest + " " + surnameLowest + " with a score of " + min);
+        System.out.println("Total amount of grades processed: " + count);
+        System.out.println("Average score: " + ((double)total/count));
     }
     
 }
+
+/* Lane Olsen 98
+ * Dean Oliver 76
+ * Sara Rosario 58
+ * Kaylen Ponce 64
+ * Julia Curtis 80
+ * Rory Hart 86
+ * Brad Klein 92
+ * Alicia Mcgrath 100
+ * Octavio Rivers 60
+ * Nasir Wall 56
+ */
