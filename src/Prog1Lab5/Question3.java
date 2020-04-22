@@ -81,6 +81,7 @@ public class Question3 {
         System.out.println("Do the first and second books have the same publisher? " + firstBook.equalsPublisher(secondBook));
         System.out.println("Do the first and third books have the same publisher? " + firstBook.equalsPublisher(thirdBook));
         System.out.println("Do the second and third books have the same publisher? " + secondBook.equalsPublisher(thirdBook));
+
     }
     
 }
