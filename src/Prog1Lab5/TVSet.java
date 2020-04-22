@@ -28,7 +28,7 @@ public class TVSet {
     private String brand;
     private int price;
     
-    //////////// CONSTRUCTOR /////////////
+    //////////// CONSTRUCTORS ////////////
     public TVSet(){
         setBrand(brand);
         setPrice(price);
