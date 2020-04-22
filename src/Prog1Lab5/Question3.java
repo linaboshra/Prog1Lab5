@@ -67,8 +67,6 @@ public class Question3 {
         thirdBook.printPublisher();
         System.out.println("");
         
-        System.out.println(firstBook);
-        
         System.out.println("Amount of books created: " + count.getAmountOfBooks());
         
         //////////////////////////////////////////////////////////////////////////////////
