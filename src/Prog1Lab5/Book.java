@@ -24,12 +24,16 @@ package Prog1Lab5;
 
 public class Book {
     
+    //////////////////////////// ATTRIBUTES ////////////////////////////////////////
     private String title;
     private String author;
     private String ISBN;
     private String yearOfPublishing;
     private static String publisher = "Vanier";
     private int amountOfBooks = 0;
+    
+    ////////////////////////// CONSTRUCTORS ////////////////////////////////////////
+    public Book(){}
     
     public Book(String title, String author, String ISBN, String yearOfPublishing){
         this.title = title;
@@ -38,8 +42,7 @@ public class Book {
         this.yearOfPublishing = yearOfPublishing;
     }
     
-    public Book(){}
-            
+    ///////////////////////////// ACCESSORS ////////////////////////////////////////
     public String getTitle(){
         return title;
     }
@@ -64,6 +67,7 @@ public class Book {
         return amountOfBooks;
     }
     
+    ////////////////// PRINT METHODS ///////////////////////////////////////////////
     public void printTitle(){
         System.out.println("Title: " + title);
     }
@@ -84,14 +88,17 @@ public class Book {
         System.out.println("Publisher: " + publisher);
     }
     
-     public void addBook(){
+    /////////////////////// MUTATOR ////////////////////////////////////////////////
+    public void addBook(){
         amountOfBooks ++;
     }
     
+    ////////////////// TOSTRING METHOD /////////////////////////////////////////////
     public String toString(){
         return(title);
     }
     
+    ////////////////// EQUALS METHODS //////////////////////////////////////////////
     public boolean equalsISBN(Book other){
         return ISBN.equals(other.ISBN);
     }
