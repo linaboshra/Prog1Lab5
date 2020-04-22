@@ -31,13 +31,15 @@ public class Book {
     private static String publisher = "Vanier";
     private int amountOfBooks = 0;
     
-    public Book(String bookTitle, String bookAuthor, String bookISBN, String bookYearOfPublishing){
-        title = bookTitle;
-        author = bookAuthor;
-        ISBN = bookISBN;
-        yearOfPublishing = bookYearOfPublishing;
+    public Book(String title, String author, String ISBN, String yearOfPublishing){
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+        this.yearOfPublishing = yearOfPublishing;
     }
     
+    public Book(){}
+            
     public String getTitle(){
         return title;
     }
@@ -82,7 +84,19 @@ public class Book {
         System.out.println("Publisher: " + publisher);
     }
     
-    void addBook(){
+     public void addBook(){
         amountOfBooks ++;
+    }
+    
+    public String toString(){
+        return(title);
+    }
+    
+    public boolean equalsISBN(Book other){
+        return ISBN.equals(other.ISBN);
+    }
+    
+    public boolean equalsPublisher(Book other){
+        return publisher.equals(other.publisher);
     }
 }
