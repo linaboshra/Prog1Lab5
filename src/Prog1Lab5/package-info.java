@@ -18,7 +18,7 @@
 /**
  * This package contains the programs submitted to lab 5.
  * 
- * @author Boshra
+ * @author Lina Boshra
  */
 
 package Prog1Lab5;
