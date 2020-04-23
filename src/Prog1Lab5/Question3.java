@@ -68,6 +68,7 @@ public class Question3 {
         System.out.println("");
         
         System.out.println("Amount of books created: " + count.getAmountOfBooks());
+        System.out.println("");
         
         //////////////////////////////////////////////////////////////////////////////////
         
