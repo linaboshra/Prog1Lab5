@@ -30,7 +30,7 @@ public class Book {
     private String ISBN;
     private String yearOfPublishing;
     private static String publisher = "Vanier";
-    private int amountOfBooks = 0;
+    private static int amountOfBooks = 0;
     
     ////////////////////////// CONSTRUCTORS ////////////////////////////////////////
     public Book(){}
